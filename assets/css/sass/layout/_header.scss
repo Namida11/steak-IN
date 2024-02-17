@@ -1,0 +1,100 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  .header-container {
+    .header-wrapper {
+      .logo {
+        width: 119px;
+        height: 29px;
+        .logo-mobile {
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .navigation {
+        .main-menu {
+          .menu-item {
+            a {
+              @include fontStyle($poppins, 14px, 20px, #fff, 700);
+              text-transform: uppercase;
+              transition: all 0.3s ease-in;
+              position: relative;
+              &:hover {
+                @include hover;
+                border-bottom: 2px solid $mainColor;
+
+                + .submenu {
+                  display: block;
+                  position: absolute;
+                  top: 102px;
+                }
+              }
+            }
+            .submenu {
+              display: none;
+              background-color: #1b1a1a;
+
+              min-width: 190px;
+              li {
+                // padding: 0px 25px;
+                border-bottom: 1px solid #ffffff0f;
+                text-align: left;
+                a {
+                  @include fontStyle($poppins, 13px, normal, #fff, normal);
+                  color: #9b9b9b;
+
+                  padding: 30px 0;
+                }
+              }
+            }
+          }
+        }
+
+        .menu-right {
+          .menu-right-button {
+            .menu-btn {
+              @include button($mainColor, 0px, 10px, #fff, $mainColor);
+              line-height: 0;
+              &:hover {
+                @include button_hover(#a67e43, #a67e43);
+              }
+            }
+          }
+          .menu-right-group {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 10px;
+              transform: translateY(-50%);
+              width: 2px;
+              height: 13px;
+              background-color: #666;
+              -webkit-transform: translateY(-50%);
+              -moz-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+              -o-transform: translateY(-50%);
+            }
+            li {
+              i {
+                font-size: 14px;
+                cursor: pointer;
+                transition: all 0.3s ease-in;
+                &:hover {
+                  @include hover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

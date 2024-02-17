@@ -1,0 +1,26 @@
+.swiper-wrapper {
+  & .slide-1 {
+    .button-one {
+      @include button(transparent, 51px, 0 30px, #fff, #fff);
+    }
+  }
+  & .slide-2 {
+    .buttons {
+      @include center-flex;
+      .button-two {
+        @include button(transparent, 51px, 0 35px, #fff, #fff);
+      }
+      & .button-three {
+        @include button(transparent, 51px, 0 30px, #fff, #fff);
+      }
+      .btn-slide:hover {
+        @include button_hover($secondMainColor, $secondMainColor);
+      }
+    }
+  }
+  //sual: niye btn-slide hover 1ci slide'da isledi lakin digerlerinde yox. axi btn-slide classi 3 classda da var ve bu klaslar wrapperin iceriisndedirler.
+
+  .btn-slide:hover {
+    @include button_hover($secondMainColor, $secondMainColor);
+  }
+}

@@ -1,0 +1,25 @@
+/* 479px'den balaca  */
+@media (max-width: 479px) {
+  .slide-subheader {
+    @include fontStyle($subHeading, 24px, 32px, #fff, 400);
+  }
+}
+/* 777px'den 480px'e  */
+@media (min-width: 480px) {
+  .slide-subheader {
+    @include fontStyle($subHeading, 30px, 40px, #fff, 400);
+  }
+}
+/* 991px'den 778px'e  */
+@media (min-width: 778px) {
+  .slide-subheader {
+    color: #fff;
+  }
+}
+
+/* 1199px'den 992px'e  */
+@media (min-width: 992px) {
+  .slide-subheader {
+    @include fontStyle($subHeading, 24px, 32px, #fff, 400);
+  }
+}

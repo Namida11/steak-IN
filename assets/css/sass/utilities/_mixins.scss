@@ -1,0 +1,48 @@
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fontStyle($fontFamily, $fontSize, $lineHeight, $textColor, $fontWeight) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  color: $textColor;
+}
+
+@mixin background {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@mixin button($bg_color, $borderRadius, $paddingX, $text_color, $border_color) {
+  border-radius: $borderRadius;
+  text-transform: uppercase;
+  background-color: $bg_color;
+  line-height: 47px;
+  font-size: 14px;
+  border: 2px solid $border_color;
+  font-weight: 700;
+  color: $text_color;
+  padding: $paddingX;
+  font-family: $poppins;
+  -webkit-border-radius: $borderRadius;
+  -moz-border-radius: $borderRadius;
+  -ms-border-radius: $borderRadius;
+  -o-border-radius: $borderRadius;
+}
+@mixin button_hover($bg_hover, $border_color, $color: #fff) {
+  background-color: $bg_hover;
+  color: $color;
+  border-color: $bg_hover;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+@mixin hover {
+  color: $mainColor !important;
+}

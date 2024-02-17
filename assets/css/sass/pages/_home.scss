@@ -1,0 +1,59 @@
+.about-section {
+  .about-left {
+    &-wrapper {
+      .about-header-wrapper {
+        .about-subheader {
+          @include fontStyle($subHeading, 45px, 1, $secondMainColor, 400);
+        }
+        .about-header {
+          @include fontStyle($sectionFontFamily, 45px, 1, #000, 400);
+        }
+        .about-header-desc {
+          @include fontStyle($poppins, 15px, 1.6, #a5a5a5, normal);
+          max-width: 670px;
+        }
+        .about-icon {
+          padding-top: 4px;
+          line-height: 1;
+          width: 18px;
+          height: 18px;
+          @include background;
+          i {
+            background-image: url("/assets/images/h-icon1.png");
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+      .about-button {
+        button {
+          @include button(transparent, 51px, 0 30px, #000, #000);
+          &:hover {
+            @include button_hover($mainColor, $mainColor);
+          }
+        }
+      }
+    }
+  }
+  .about-right {
+    & .wrapper {
+      padding: 10px;
+      .image-one {
+        background-image: url("/assets/images/home1-about1.jpg");
+        width: 270px;
+        height: 400px;
+        .image-one-border {
+          border: 1px dashed #fff;
+        }
+      }
+      .image-two {
+        background-image: url("/assets/images/home1-about2.jpg");
+        width: 270px;
+        height: 440px;
+        .image-two-border {
+          border: 1px dashed #fff;
+        }
+      }
+    }
+  }
+}

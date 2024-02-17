@@ -1,0 +1,136 @@
+// .swiper-container {
+//     width: 100%;
+//     height: 100vh;
+//     .swiper-wrapper {
+//         .swiper-slide {
+//             background-size: cover;
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             width: 100%;
+//             height: 100%;
+//             .slide-content-bg {
+//                 @include center-flex;
+//                 background-color: rgba(27, 26, 26, 0.65);
+
+//                 .slide-content-wrapper {
+//                     .slide-subheader {
+//                         @include fontStyle($subHeading, 45px, 58px, $secondMainColor, 400);
+//                     }
+
+//                     .slide-header {
+//                         @include fontStyle($sectionFontFamily, 85px, 85px, #fff, 400);
+//                     }
+
+//                     .slide-caption {
+//                         @include fontStyle($poppins, 1rem, 26px, #fff, 600);
+//                     }
+//                 }
+//             }
+
+//             &.slide1 {
+//                 width: 100%;
+//                 height: 100%;
+//                 background-image: url("/assets/images/carousel/bg-slider1.jpg");
+//                 background-attachment: fixed;
+//             }
+
+//             &.slide2 {
+//                 width: 100%;
+//                 height: 100%;
+//                 background-image: url("/assets/images/carousel/bg-slider2.jpg");
+//                 background-attachment: fixed;
+//             }
+
+//             &.slide3 {
+//                 width: 100%;
+//                 height: 100%;
+//                 background-image: url("/assets/images/carousel/bg-parallax6.jpg");
+//                 background-attachment: fixed;
+//             }
+//         }
+//     }
+//     .swiper-button-next {
+
+//         width: 10px;
+//     }
+// }
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+  & .swiper-wrapper {
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      width: 100%;
+      height: 100%;
+      &.slide-1 {
+        background-image: url("/assets/images/carousel/bg-slider1.jpg");
+        background-attachment: fixed;
+      }
+      &.slide-2 {
+        background-image: url("/assets/images/carousel/bg-slider2.jpg");
+        background-attachment: fixed;
+      }
+      &.slide-3 {
+        background-image: url("/assets/images/carousel/bg-parallax6.jpg");
+        background-attachment: fixed;
+      }
+    }
+    .slide-content-bg {
+      @include center-flex;
+      background-color: rgba(27, 26, 26, 0.65);
+      background-attachment: fixed;
+
+      .slide-content-wrapper {
+        .slide-subheader {
+          @include fontStyle($subHeading, 45px, 58px, $secondMainColor, 400);
+        }
+
+        .slide-header {
+          @include fontStyle($sectionFontFamily, 85px, 85px, #fff, 400);
+        }
+
+        .slide-caption {
+          @include fontStyle($poppins, 1rem, 26px, #fff, 600);
+        }
+      }
+    }
+  }
+
+  & .swiper-button-next {
+    &:after {
+      content: "" !important;
+      @include background;
+      position: absolute;
+      right: -11px;
+      width: 21px;
+      height: 100px;
+      background-image: url("/assets/images/carousel/slider-arrow-right.png");
+    }
+  }
+  & .swiper-button-prev {
+    &:after {
+      content: "" !important;
+      @include background;
+      position: absolute;
+      width: 21px;
+      height: 100px;
+      left: -11px;
+
+      background-image: url("/assets/images/carousel/slider-arrow-left.png");
+    }
+  }
+  .swiper-horizontal &.swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+  }
+}
+.ap {
+  height: 400px;
+}

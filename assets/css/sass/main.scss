@@ -1,0 +1,21 @@
+// utilities
+@import "../sass/utilities/variables";
+@import "../sass/utilities/mixins";
+
+//base
+@import "../sass/base/reset";
+
+//components
+@import "../sass/components/button";
+@import "../sass/components/carousel";
+
+//layout
+@import "../sass/layout/footer";
+@import "../sass/layout/header";
+
+//pages
+@import "../sass/pages/home";
+@import "../sass/pages/menu";
+
+//responsive
+@import "../sass/responsive";
